@@ -9,3 +9,5 @@ brealid.egg-info/dependency_links.txt
 brealid.egg-info/requires.txt
 brealid.egg-info/top_level.txt
 brealid/ctf/__init__.py
+brealid/ctf/crypto/GaloisNumber_2n.py
+brealid/ctf/crypto/__init__.py

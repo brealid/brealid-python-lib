@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: brealid
+Version: 0.0.1
+Summary: brealid's python package
+Home-page: https://github.com/brealid/brealid-python-lib
+Author: brealid
+Author-email: brealid@mail.ustc.edu.cn
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# brealid-python-lib
+
+brealid python library

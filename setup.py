@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="brealid",
-    version="v0.0.4",
+    version="v0.0.5",
     author="brealid",
     author_email="brealid@mail.ustc.edu.cn",
     description="brealid's python package",
@@ -22,5 +22,6 @@ setuptools.setup(
     install_requires=[
         "pycryptodome>=3.15.0",
         "requests>=2.24.0",
+        "tqdm>=4.0.0",
     ]
 )

@@ -11,9 +11,12 @@ pip install brealid
 ## Structure
 
 - brealid
+  - utils
+    - benchmark
   - ctf
     - crypto
-      - Alias (remote, bytes_xor)
+      - some useful functions
+        - bytes_xor
       - GF2n
 
 ## Usage

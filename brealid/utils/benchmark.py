@@ -14,14 +14,14 @@ def fmtTime(duration):
     
 def fmtBig(bignum):
     return f"{bignum:.3g}"
-    if bignum >= 1000**3:
-        return f"{bignum/1000**3:.3g}G"
-    elif bignum >= 1000**2:
-        return f"{bignum/1000**2:.3g}M"
-    elif bignum >= 1000**1:
-        return f"{bignum/1000**1:.3g}K"
-    else:
-        return f"{bignum:.3g}"
+    # if bignum >= 1000**3:
+    #     return f"{bignum/1000**3:.3g}G"
+    # elif bignum >= 1000**2:
+    #     return f"{bignum/1000**2:.3g}M"
+    # elif bignum >= 1000**1:
+    #     return f"{bignum/1000**1:.3g}K"
+    # else:
+    #     return f"{bignum:.3g}"
 
 def time_the_func(to_measure):
     def __wrapper__(*args, **kwargs):
@@ -94,4 +94,5 @@ def benchmark(n = 10000, m = 10000):
     print(f'[+] {fmtTime(_mean)} ± {fmtTime(_std)} per operation (mean ± std. dev. of 7 runs, {n * m:,} loops each)')
     print(f'    Float Dividing ==> {fmtBig(1 / _mean)}/s')
     
-benchmark(2000, 10000)
+# if __name__ == '__main__':
+#     benchmark(2000, 10000)

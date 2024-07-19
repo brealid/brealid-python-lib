@@ -34,7 +34,7 @@ class EasyCrypt:
         key = EasyCrypt.typingEncode(key)
         self.key = sha384(key).digest()[8:24]
         
-    def encode(self, data):
+    def encrypt(self, data):
         data = EasyCrypt.typingEncode(data)
         iv = os.urandom(16)
         aes = AES.new(self.key, AES.MODE_CBC, iv)
@@ -42,7 +42,7 @@ class EasyCrypt:
         encrypted = base64.b64encode(encrypted).decode()
         return encrypted
     
-    def decode(self, data):
+    def decrypt(self, data):
         if type(data) is str:
             data = data.decode()
         elif type(data) is bytes:

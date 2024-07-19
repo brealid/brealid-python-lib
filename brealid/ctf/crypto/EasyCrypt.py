@@ -58,8 +58,8 @@ class EasyCrypt:
         return encrypted
     
     def decrypt(self, data, decoder=base64.b64decode):
-        if type(encrypted) == bytes:
-            encrypted = encrypted.decode()
+        if type(data) == bytes:
+            data = data.decode()
         try:
             data = decoder(data)
         except:

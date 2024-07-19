@@ -48,6 +48,7 @@ class EasyCrypt:
         
     def encrypt(self, data, encoder=base64.b64encode):
         data = EasyCrypt.typingEncode(data)
+        data = EasyCrypt.pad(data)
         iv = os.urandom(16)
         aes = AES.new(self.key, AES.MODE_CBC, iv)
         encrypted = iv + aes.encrypt(data)
@@ -69,5 +70,6 @@ class EasyCrypt:
         iv, data = data[:16], data[16:]
         aes = AES.new(self.key, AES.MODE_CBC, iv)
         decrypted = aes.decrypt(data)
+        decrypted = EasyCrypt.unpad(decrypted)
         decrypted = EasyCrypt.typingDecode(decrypted)
         return decrypted

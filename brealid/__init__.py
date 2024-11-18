@@ -1,4 +1,4 @@
-__all__ = ['ctf', 'utils']
+__all__ = ['ctf', 'utils', 'essential']
 
 version_info = (0, 0, '10')
 

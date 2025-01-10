@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: brealid
-Version: 0.0.3
+Version: 0.0.10
 Summary: brealid's python package
 Home-page: https://github.com/brealid/brealid-python-lib
 Author: brealid
@@ -11,6 +11,9 @@ Classifier: Operating System :: OS Independent
 Requires-Python: >=3.6
 Description-Content-Type: text/markdown
 License-File: LICENSE
+Requires-Dist: pycryptodome>=3.15.0
+Requires-Dist: requests>=2.24.0
+Requires-Dist: tqdm>=4.0.0
 
 # brealid-python-lib
 
@@ -25,9 +28,12 @@ pip install brealid
 ## Structure
 
 - brealid
+  - utils
+    - benchmark
   - ctf
     - crypto
-      - Alias (remote, bytes_xor)
+      - some useful functions
+        - bytes_xor
       - GF2n
 
 ## Usage
